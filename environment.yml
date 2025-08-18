@@ -1,0 +1,23 @@
+name: spipe_env
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  # Python
+  - python=3.12.8
+  - pip
+
+  # R base + CRAN packages
+  - r-base=4.3.1
+  - r-reshape
+  - r-seurat
+  - r-devtools
+
+  # pip dependencies
+  - pip
+  - pip:
+      # GitHub R package SCEPTRE
+      - git+https://github.com/katsevich-lab/sceptre.git
+      # Local ParseBiosciences Pipeline
+      - ./ParseBiosciences-Pipeline.1.2.1
